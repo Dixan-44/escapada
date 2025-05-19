@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fin de semana relax</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --primary:#008cff; --secondary:#00c6ff; --sand:#fffdf6; --text:#1f1f1f; }
+    *,*::before,*::after{box-sizing:border-box;}
+    html,body{margin:0;height:100%;scroll-behavior:smooth;font-family:"Poppins",sans-serif;color:var(--text);background:var(--sand);}  
+    header.hero{position:relative;width:100%;height:85vh;min-height:460px;overflow:hidden;}
+    header.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+    header.hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55);}  
+    .hero-inner{position:absolute;bottom:15%;left:50%;transform:translateX(-50%);text-align:center;color:#fff;padding:0 12px;}
+    .hero-inner h1{font-size:clamp(2.2rem,5vw,3.6rem);margin:0 0 8px;font-weight:600;}
+    .hero-inner p{margin:0;font-size:1.1rem;}
+    .avatar-wrap{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:200px;height:200px;border-radius:50%;overflow:hidden;border:6px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.25);}
+    .avatar-wrap img{width:100%;height:100%;object-fit:cover;}
+    section{padding:60px 18px;}
+    section:nth-child(even){background:#eef6ff;}
+    .content{max-width:900px;margin:auto;opacity:0;transform:translateY(40px);}  
+    .content.fade-in{animation:fadeUp .8s ease forwards;}
+    h2{margin-top:0;font-size:2rem;color:var(--primary);}  
+    ul.itinerary{list-style:none;padding:0;}
+    ul.itinerary li{margin:16px 0;padding-left:34px;position:relative;line-height:1.4;}
+    ul.itinerary li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--primary);font-weight:600;}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:22px;}
+    .gallery img{width:100%;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.15);object-fit:cover;height:200px;}
+    .btn-map{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--primary);color:#fff;padding:14px 32px;border:none;border-radius:32px;font-size:1rem;font-weight:600;box-shadow:0 6px 18px rgba(0,140,255,.35);z-index:999;}
+    .btn-map:hover{background:var(--secondary);}  
+    @keyframes fadeUp{to{opacity:1;transform:none;}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <video autoplay muted loop playsinline poster="hero.jpg"><source src="https://cdn.coverr.co/videos/coverr-relaxing-water-1562/1080p.mp4" type="video/mp4" /></video>
+    <div class="avatar-wrap"><img src="hero.jpg" alt="Nosotros" /></div>
+    <div class="hero-inner">
+      <h1>Fin de semana relax<br><span style="font-size:.6em;">(no es una casa en el árbol 😉)</span></h1>
+      <p>25 - 26 de mayo · Termes d'Orion</p>
+    </div>
+  </header>
+
+  <section id="escapada">
+    <div class="content">
+      <h2>Tu escapada</h2>
+      <ul class="itinerary">
+        <li>Domingo 25 · 11:30 · Tratamiento corporal de 90&nbsp;min (exfoliación y masaje con aceites aromáticos).</li>
+        <li>Día completo de balneario: lectura, baños termales y descanso absoluto.</li>
+        <li>Cena donde más te apetezca (yo invito).</li>
+        <li>Lunes 26 · Desayuno sin prisas + 3&nbsp;h en spa MAGMA.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="hotel">
+    <div class="content">
+      <h2>Termes d'Orion</h2>
+      <div class="gallery">
+        <img src="img/orion.jpg" alt="Vista aérea Termes d'Orion" />
+        <img src="img/termes.jpg" alt="Piscina interior Termes d'Orion" />
+        <img src="img/termes2.jpg" alt="Exterior Termes d'Orion" />
+        <img src="img/orion2.jpg" alt="Habitación Termes d'Orion" />
+      </div>
+      <p style="margin-top:18px;">Un rincón de paz rodeado de naturaleza. Habitación doble moderna, silencio y el sonido del agua.</p>
+    </div>
+  </section>
+
+  <section id="spa" style="background:#eef6ff;">
+    <div class="content">
+      <h2>Spa MAGMA</h2>
+      <div class="gallery">
+        <img src="img/magma.jpg" alt="Spa MAGMA interior" />
+        <img src="img/magma2.jpg" alt="Spa MAGMA exterior" />
+        <img src="img/magma3.jpg" alt="Estructura Spa MAGMA" />
+      </div>
+      <p style="margin-top:18px;">Piscinas termales, chorros a presión y vapor para resetear cuerpo y mente.</p>
+    </div>
+  </section>
+
+  <section id="mensaje" style="padding-bottom:120px;">
+    <div class="content" style="text-align:center;">
+      <p style="font-size:1.2rem;line-height:1.6;">El lunes no hay prisa. Nos levantamos sin alarmas, desayunamos con calma y luego nos vamos al spa MAGMA, donde estaremos unas 3 horas disfrutando.<br><br>Ojalá te guste, te sirva para desconectar y recargar pilas. Te lo mereces. Estás luchando mucho, y aunque a veces no lo parezca, poco a poco todo va tomando forma. Sigue confiando en ti. Aprovecha estos días para parar un momento y darte cuenta de todo lo que ya estás haciendo.<br><br>Te quiero más que a nada.<br><br>Tu amorcito,<br>Dani ❤️</p>
+    </div>
+  </section>
+
+  <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Termes+d'Orion+Santa+Coloma+de+Farners" target="_blank" rel="noopener">Abrir Maps</a>
+
+  <script>
+    const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('fade-in');observer.unobserve(e.target);}})},{threshold:.15});
+    document.querySelectorAll('.content').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
